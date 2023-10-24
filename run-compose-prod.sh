@@ -21,5 +21,5 @@ docker-compose -f docker-compose.prod.yml up -d
 sleep 10 
 docker exec doggithub-api-1 python /src/manage.py makemigrations 
 docker exec doggithub-api-1 python /src/manage.py migrate
-# docker exec -it doggithub-api-1 python manage.py loaddata fixtures.json
+docker exec -it doggithub-api-1 python manage.py loaddata fixtures.json
 

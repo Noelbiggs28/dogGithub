@@ -19,7 +19,7 @@ docker-compose -f docker-compose.prod.yml up -d
 
 # make sure the postgres container is ready, then run migrations
 sleep 10 
-docker exec v2_dog_park-api-1 python /src/manage.py makemigrations 
-docker exec v2_dog_park-api-1 python /src/manage.py migrate
-# docker exec -it v2_dog_park-api-1 python manage.py loaddata fixtures.json
+docker exec doggithub-api-1 python /src/manage.py makemigrations 
+docker exec doggithub-api-1 python /src/manage.py migrate
+# docker exec -it doggithub-api-1 python manage.py loaddata fixtures.json
 
